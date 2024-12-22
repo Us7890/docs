@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Files</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="video">Upload Video:</label>
+        <input type="file" name="video" id="video" accept="video/*"><br>
+        
+        <label for="photo">Upload Photo:</label>
+        <input type="file" name="photo" id="photo" accept="image/*"><br>
+        
+        <label for="document">Upload Document:</label>
+        <input type="file" name="document" id="document" accept=".pdf,.doc,.docx,.txt"><br>
+        
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
